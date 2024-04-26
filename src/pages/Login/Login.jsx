@@ -3,9 +3,11 @@ import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const {login} = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
 
     const {
         register,
@@ -16,11 +18,24 @@ const Login = () => {
 
     const onSubmit = (data) => {
         const { email, password } = data;
+
+        // login user
+        login(email, password)
+            .then(result => {
+                console.log(result.user);
+                toast.success('You have logged in successfully');
+                reset();
+            })
+            .catch(error => {
+                console.log(error);
+                toast.error('Password or Email does not match.');
+                reset();
+            })
     }
 
     return (
         <div className="mt-36 mb-20">
-        <div className="w-full font-roboto mx-auto max-w-md p-8 space-y-3 rounded-none bg-gray-100 text-gray-100 shadow-2xl">
+            <div className="w-full font-roboto mx-auto max-w-md p-8 space-y-3 rounded-none bg-gray-100 text-gray-100 shadow-2xl">
                 <h1 className="text-2xl font-bold text-center text-gray-900">Login</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="space-y-1 text-lg">
