@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CgProfile } from "react-icons/cg";
 import { IoIosHome } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -10,11 +10,12 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
     const navLinks = <>
-        <NavLink className={({ isActive }) => isActive ? 'underline mr-4' : 'mr-4'} to='/'>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline mr-4 text-[#2095AE]' : 'text-[#0f2454] mr-4'} to='/'>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline mr-4 text-[#2095AE]' : 'text-[#0f2454] mr-4'} to='/allTouristsSpot'>All Tourists Spot</NavLink>
         {
             user && <>
-                <NavLink className={({ isActive }) => isActive ? 'underline mr-4' : 'mr-4'} to='/updatedProfile'>Updated Profile</NavLink>
-                <NavLink className={({ isActive }) => isActive ? 'underline mr-4' : 'mr-4'} to='/agents'>Agents</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'underline mr-4 text-[#2095AE]' : 'mr-4 text-[#0f2454]'} to='/addTouristsSpot'>Add Tourists Spot</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'underline mr-4 text-[#2095AE]' : 'mr-4 text-[#0f2454]'} to='/myList'>My List</NavLink>
             </>
         }
     </>
@@ -30,14 +31,18 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar fixed top-0 w-full right-0 left-0 z-20 bg-gray-900 text-white px-1 lg:px-9 lg:py-7">
+            <div className="navbar font-barlow fixed top-0 w-full right-0 left-0 z-20 bg-white px-1 lg:px-9 lg:py-7">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-gray-900 text-white font-roboto rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-white text-[#0f2454] font-barlow rounded-box w-52">
                             {navLinks}
+                            <div className="block">
+                                <Link to='/login' className="btn mr-5 w-14 lg:w-20 bg-[#2095AE] text-white border-none font-barlow text-xl">Login</Link>
+                                <Link to='/register' className="btn w-14 lg:w-20 bg-[#0f2454] text-white border-none font-barlow text-xl">Register</Link>
+                            </div>
                         </ul>
                     </div>
                     <div className="hidden md:block lg:block">
@@ -48,7 +53,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="text-xl menu menu-horizontal px-1 bg-gray-900 text-white font-roboto">
+                    <ul className="text-xl menu menu-horizontal px-1 bg-white text-[#0f2454] font-barlow">
                         {navLinks}
                     </ul>
                 </div>
@@ -78,7 +83,7 @@ const Navbar = () => {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link to='/updatedProfile' className="space-x-3 flex items-center">
+                                                    <Link className="space-x-3 flex items-center">
                                                         <IoSettingsOutline className="text-lg"></IoSettingsOutline>
                                                         <p>Updated Profile</p>
                                                     </Link>
@@ -107,7 +112,7 @@ const Navbar = () => {
                                     <img src={user.photoURL} />
                                 </div>
                             </div> */}
-                            <Link onClick={handleLogOut} className="hidden lg:block btn w-14 lg:w-28 bg-gray-900 text-white border-none font-roboto text-base lg:text-xl text-center">Log out</Link>
+                            <Link onClick={handleLogOut} className="hidden lg:block w-14 lg:w-28 bg-[#2095AE] text-white border-none font-roboto text-base lg:text-xl text-center"><button className="btn">Log out</button></Link>
                         </div> :
                         <div className="navbar-end flex gap-2 lg:gap-4">
                             <div className="block md:hidden lg:hidden">
@@ -116,7 +121,10 @@ const Navbar = () => {
                                     <p><a className="btn btn-ghost text-lg font-pt_sans lg:text-4xl">DreamLoom Realty</a></p>
                                 </div>
                             </div>
-                            <Link to='/login' className="btn w-14 lg:w-20 bg-gray-900 text-white border-none font-roboto text-xl">Login</Link>
+                            <div className="hidden lg:block">
+                                <Link to='/login' className="btn mr-5 w-14 lg:w-20 bg-[#2095AE] text-white border-none font-barlow text-xl">Login</Link>
+                                <Link to='/register' className="btn w-14 lg:w-20 bg-[#0f2454] text-white border-none font-barlow text-xl">Register</Link>
+                            </div>
                         </div>
                 }
             </div>
