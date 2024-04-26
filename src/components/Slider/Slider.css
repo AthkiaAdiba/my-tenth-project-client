@@ -1,0 +1,30 @@
+.slide{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+
+/* .swiper::before{
+    background-color: rgba(0, 0, 0, 0.7);
+} */
+
+.slide1 {
+    background-image: url("../../assets/1.jpg");
+    
+    
+}
+
+
+.slide2 {
+    background-image: url("../../assets/2.jpg");
+}
+
+.slide3 {
+    background-image: url("../../assets/3.jpg");
+}
