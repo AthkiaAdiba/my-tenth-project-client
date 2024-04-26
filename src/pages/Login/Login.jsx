@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const { login } = useContext(AuthContext);
+    const { login, loginWithGoogle } = useContext(AuthContext);
 
     const {
         register,
@@ -30,6 +30,20 @@ const Login = () => {
                 console.log(error);
                 toast.error('Password or Email does not match.');
                 reset();
+            })
+    }
+
+
+    // login with google
+    const handleLoginWithGoogle = () => {
+        loginWithGoogle()
+            .then(result => {
+                console.log(result.user)
+                toast.success('You have logged in successfully');
+                
+            })
+            .catch(error => {
+                console.log(error)
             })
     }
 
@@ -59,7 +73,7 @@ const Login = () => {
                 </div>
                 <div className="space-y-5">
                     <div>
-                        <button className="text-black text-lg flex items-center justify-center w-full p-4 space-x-4 rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 border-2">
+                        <button onClick={handleLoginWithGoogle} className="text-black text-lg flex items-center justify-center w-full p-4 space-x-4 rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 border-2">
                             <FaGoogle></FaGoogle>
                             <p>Login with Google</p>
                         </button>
