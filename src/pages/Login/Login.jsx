@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const { login, loginWithGoogle } = useContext(AuthContext);
+    const { login, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
 
     const {
         register,
@@ -40,10 +40,25 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 toast.success('You have logged in successfully');
-                
+
             })
             .catch(error => {
                 console.log(error)
+            })
+    }
+
+    // login with Github
+    const handleLoginWithGithub = () => {
+        loginWithGithub()
+            .then(result => {
+                console.log(result.user)
+                toast.success('You have logged in successfully');
+                
+
+            })
+            .catch(error => {
+                console.error(error)
+
             })
     }
 
@@ -79,7 +94,7 @@ const Login = () => {
                         </button>
                     </div>
                     <div>
-                        <button className="text-black text-lg flex items-center justify-center w-full p-4 space-x-4 border-2 rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 focus:dark:ring-violet-600">
+                        <button onClick={handleLoginWithGithub} className="text-black text-lg flex items-center justify-center w-full p-4 space-x-4 border-2 rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 focus:dark:ring-violet-600">
                             <FaGithub></FaGithub>
                             <p>Login with GitHub</p>
                         </button>
