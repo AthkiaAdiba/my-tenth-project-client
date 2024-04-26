@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import AddTouristsSpot from "../pages/AddTouristsSpot/AddTouristsSpot";
 import MyList from "../pages/MyList/MyList";
 import AllTouristsSpot from "../pages/AllTouristsSpot/AllTouristsSpot";
+import Register from "../pages/Register/Register";
 
 
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: '/myList',
                 element: <MyList></MyList>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
         ]
     }

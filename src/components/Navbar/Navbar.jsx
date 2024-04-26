@@ -1,23 +1,32 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { IoIosHome } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
-    const [user, setUser] = useState([]);
+    const { user, logOut } = useContext(AuthContext);
 
     const navLinks = <>
         <NavLink className={({ isActive }) => isActive ? 'underline mr-4' : 'mr-4'} to='/'>Home</NavLink>
-        {/* {
+        {
             user && <>
                 <NavLink className={({ isActive }) => isActive ? 'underline mr-4' : 'mr-4'} to='/updatedProfile'>Updated Profile</NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'underline mr-4' : 'mr-4'} to='/agents'>Agents</NavLink>
             </>
-        } */}
-
+        }
     </>
+
+    // Log out
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                console.log('logged out successfully')
+            })
+            .catch()
+    }
 
     return (
         <div>
