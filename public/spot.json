@@ -8,7 +8,7 @@
         "short_description": "Iconic iron lattice tower offering city views & tours, with dining, shopping & history exhibits.",
         "average_cost": 25,
         "season": "summer",
-        "travel_time": "3 days",
+        "travel_time": "3 Days",
         "totalVisitorsPerYear": 7000000,
         "User_Email": "user1@example.com",
         "User_Name": "John Doe"
@@ -21,8 +21,8 @@
         "location": "Paris",
         "short_description": "The Louvre Museum is a historic art museum, home to iconic works like the Mona Lisa.",
         "average_cost": 50,
-        "season": "spring",
-        "travel_time": "5 days",
+        "season": "Spring",
+        "travel_time": "5 Days",
         "totalVisitorsPerYear": 10000000,
         "User_Email": "user2@example.com",
         "User_Name": "Jane Smith"
@@ -36,7 +36,7 @@
         "short_description": "Colosseum is the ancient gladiator’s stadium where all staged fights were taking place.",
         "average_cost": 100,
         "season": "summer",
-        "travel_time": "4 days",
+        "travel_time": "4 Days",
         "totalVisitorsPerYear": 1500000,
         "User_Email": "user3@example.com",
         "User_Name": "Alice Johnson"
@@ -50,7 +50,7 @@
         "short_description": "Manarola, a picturesque village in Italy's Cinque Terre region, boasts colorful buildings clinging to cliffs overlooking the Ligurian Sea.",
         "average_cost": 75,
         "season": "summer",
-        "travel_time": "7 days",
+        "travel_time": "7 Days",
         "totalVisitorsPerYear": 5000000,
         "User_Email": "user4@example.com",
         "User_Name": "Michael Brown"
@@ -64,7 +64,7 @@
         "short_description": "Combining beach vibes with generous helpings of culture, Barcelona is one of the best places to visit in Spain.",
         "average_cost": 30,
         "season": "spring",
-        "travel_time": "4 days",
+        "travel_time": "4 Days",
         "totalVisitorsPerYear": 8000000,
         "User_Email": "user5@example.com",
         "User_Name": "Emily Wilson"
@@ -78,7 +78,7 @@
         "short_description": "Nestled at the foot of the Sierra Nevada mountain range, in the heart of Andalusia, Granada is exceptionally beautiful.",
         "average_cost": 150,
         "season": "summer",
-        "travel_time": "5 days",
+        "travel_time": "5 Days",
         "totalVisitorsPerYear": 6000000,
         "User_Email": "user6@example.com",
         "User_Name": "Daniel Rodriguez"
@@ -92,7 +92,7 @@
         "short_description": "The London Eye is a giant Ferris wheel that is located on the South Bank of the River Thanes in London, England. ",
         "average_cost": 50,
         "season": "Spring",
-        "travel_time": "3 days",
+        "travel_time": "3 Days",
         "totalVisitorsPerYear": 8000000,
         "User_Email": "user7@example.com",
         "User_Name": "Sophia Clark"
@@ -106,7 +106,7 @@
         "short_description": "Derwentwater is a scenic lake located in England's Lake District National Park, renowned for its beauty and recreational activities.",
         "average_cost": 40,
         "season": "spring",
-        "travel_time": "4 days",
+        "travel_time": "4 Days",
         "totalVisitorsPerYear": 4000000,
         "User_Email": "user8@example.com",
         "User_Name": "William Martinez"
@@ -120,21 +120,21 @@
         "short_description": "It’s quite famous for its canals, coffee shops, cultural history, art galleries, it’s bike riding culture, its Dutch tulips etc.",
         "average_cost": 100,
         "season": "summer",
-        "travel_time": "4 days",
+        "travel_time": "4 Days",
         "totalVisitorsPerYear": 1500000,
         "User_Email": "user9@example.com",
         "User_Name": "Olivia Davis"
     },
     {
         "id": 10,
-        "image": "statue_of_liberty.jpg",
+        "image": "https://res.cloudinary.com/dv6fgvj2c/image/upload/v1714200547/mo634ylh2fykt89nlqkb.jpg",
         "tourists_spot_name": "Tulips and windmill",
         "country_Name": "Netherlands",
         "location": "Keukenhof",
         "short_description": "Tulips bloom against a backdrop of a Dutch windmill, symbolizing the vibrant beauty and cultural heritage of the Netherlands.",
         "average_cost": 30,
         "season": "summer",
-        "travel_time": "3 days",
+        "travel_time": "3 Days",
         "totalVisitorsPerYear": 4000000,
         "User_Email": "user10@example.com",
         "User_Name": "Benjamin Lee"
@@ -148,7 +148,7 @@
         "short_description": "The Jungfraujoch is an Alpine wonderland that fully deserves its nickname of the Top of Europe.",
         "average_cost": 50,
         "season": "winter",
-        "travel_time": "4 days",
+        "travel_time": "4 Days",
         "totalVisitorsPerYear": 2500000,
         "User_Email": "user11@example.com",
         "User_Name": "Ethan Thompson"
@@ -162,7 +162,7 @@
         "short_description": "Lucerne is one of the best places to go in Switzerland with family. Witness the emerald green meadow.",
         "average_cost": 40,
         "season": "summer",
-        "travel_time": "4 days",
+        "travel_time": "4 Days",
         "totalVisitorsPerYear": 6000000,
         "User_Email": "user12@example.com",
         "User_Name": "Emma Baker"
