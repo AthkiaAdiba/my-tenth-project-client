@@ -1,10 +1,11 @@
+import HomeTourists from "../../components/HomeTourists/HomeTourists";
 import Slider from "../../components/Slider/Slider";
 
 const Home = () => {
     return (
         <div>
-           <h2>From Home</h2>
-           <Slider></Slider> 
+           <Slider></Slider>
+           <HomeTourists></HomeTourists> 
         </div>
     );
 };
