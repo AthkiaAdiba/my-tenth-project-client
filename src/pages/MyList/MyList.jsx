@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { IoPencilSharp } from "react-icons/io5";
+import { MdDeleteForever } from "react-icons/md";
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
     const [myList, setMyList] = useState([]);
     console.log(myList)
 
-    console.log(user?.email)
+    // console.log(user?.email)
 
     useEffect(() => {
         if (user?.email) {
@@ -18,40 +20,34 @@ const MyList = () => {
     }, [user])
 
     return (
-        <div className="mt-44">
+        <div className="mt-28 lg:mt-44 mb-20 mx-[10%]">
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
-                    <thead>
+                    <thead className="bg-[#0f2454] text-white text-xl font-roboto font-medium">
                         <tr>
                             <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Tourists Spot</th>
+                            <th>Country</th>
+                            <th>Season</th>
+                            <th>Travel Time</th>
+                            <th>Update</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        <tr>
-                            <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>Blue</td>
-                        </tr>
-                        {/* row 2 */}
-                        <tr className="hover">
-                            <th>2</th>
-                            <td>Hart Hagerty</td>
-                            <td>Desktop Support Technician</td>
-                            <td>Purple</td>
-                        </tr>
-                        {/* row 3 */}
-                        <tr>
-                            <th>3</th>
-                            <td>Brice Swyre</td>
-                            <td>Tax Accountant</td>
-                            <td>Red</td>
-                        </tr>
+                        {
+                            myList.map((oneRow, idx) => <tr key={oneRow._id} className="hover hover:text-black bg-[#2095AE] text-white text-base font-barlow font-medium">
+                                <th>{idx + 1}</th>
+                                <td>{oneRow.spotName}</td>
+                                <td>{oneRow.countryName}</td>
+                                <td>{oneRow.season}</td>
+                                <td>{oneRow.travelTime}</td>
+                                <th><IoPencilSharp className="text-xl font-extrabold"></IoPencilSharp></th>
+                                <th><MdDeleteForever className="text-xl font-extrabold"></MdDeleteForever></th>
+                            </tr>)
+                        }
                     </tbody>
                 </table>
             </div>
