@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Spot = ({spot}) => {
-    const { spotName, cost, season, photo, travelTime, visitors } = spot;
+    const { _id,spotName, cost, season, photo, travelTime, visitors } = spot;
     return (
         <div>
             <div className="shadow-md">
@@ -28,7 +29,7 @@ const Spot = ({spot}) => {
                             </div>
                         </div>
                     </div>
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0f2454] text-white">View Details</button>
+                    <Link to={`/addSpot/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0f2454] text-white">View Details</button></Link>
                 </div>
             </div>
         </div>
