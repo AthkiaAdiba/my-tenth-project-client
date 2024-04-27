@@ -1,17 +1,60 @@
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const AddTouristsSpot = () => {
+    const { user } = useContext(AuthContext);
+
+    const handleAddSpotData = e => {
+        e.preventDefault();
+
+        const form = e.target;
+
+        const countryName = form.countryName.value;
+        const spotName = form.touristsSpotName.value;
+        const location = form.location.value;
+        const cost = form.cost.value;
+        const season = form.season.value;
+        const photo = form.photo.value;
+        const visitors = form.visitors.value;
+        const travelTime = form.travelTime.value;
+        const description = form.description.value;
+
+        const addSpot = { countryName, spotName, location, cost, season, photo, travelTime, visitors, description, userEmail: user.email, userName: user.displayName }
+        // console.log(addSpot);
+
+        fetch('http://localhost:5000/addSpot', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addSpot)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+    }
     return (
         <div className="bg-[#2095AE] font-barlow mb-24 py-16 px-3 lg:px-24 mt-16 lg:mt-24">
             <h2 className="text-4xl font-extrabold text-center mb-5 text-white">Add Tourists Spot Page</h2>
-            <form>
+            <form onSubmit={handleAddSpotData}>
                 {/* Country and tourists spot name row */}
                 <div className="md:flex mb-3 lg:mb-8">
                     <div className="form-control md:w-1/2 mb-3 lg:mb-0">
                         <label className="label">
                             <span className="label-text text-white text-xl font-medium">Country Name</span>
                         </label>
-                        <label className="input-group">
-                            <input type="text" name="countryName" placeholder="Country Name" className="input input-bordered w-full" />
+                        <label className="input-group text-black">
+                            <select type="text" name="countryName" placeholder="Country Name" className="select select-bordered w-full text-gray-400 text-base">
+                                <option className="text-black">Country Name</option>
+                                <option className="text-black">France</option>
+                                <option className="text-black">Italy</option>
+                                <option className="text-black">Spain</option>
+                                <option className="text-black">England</option>
+                                <option className="text-black">Netherlands</option>
+                                <option className="text-black">Switzerland</option>
+                            </select>
+                            {/* <input type="text" name="countryName" placeholder="Country Name" className="input input-bordered w-full" /> */}
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
@@ -76,7 +119,7 @@ const AddTouristsSpot = () => {
                             <span className="label-text text-white text-xl font-medium">Total Visitors Per Year</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="travelTime" placeholder="Total Visitors Per Year" className="input input-bordered w-full" />
+                            <input type="text" name="visitors" placeholder="Total Visitors Per Year" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
@@ -87,7 +130,7 @@ const AddTouristsSpot = () => {
                             <span className="label-text text-white text-xl font-medium">User Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="email" placeholder="User Email" className="input input-bordered w-full" />
+                            <input type="email" name="email" placeholder="User Email" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4">
