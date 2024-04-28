@@ -9,6 +9,7 @@ import Login from "../pages/Login/Login";
 import Details from "../components/Details/Details";
 import UpdatePage from "../pages/UpdatePage/UpdatePage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import CountryWisePage from "../pages/CountryWisePage/CountryWisePage";
 
 
 
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
                 path: '/allTouristsSpot',
                 element: <AllTouristsSpot></AllTouristsSpot>,
                 loader: () => fetch('http://localhost:5000/addSpot')
+            },
+            {
+                path: '/countryWiseCards/:countryName',
+                element: <CountryWisePage></CountryWisePage>,
+                loader: ({params}) => fetch(`http://localhost:5000/countryWiseCards/${params.countryName}`)
             },
             {
                 path: '/addTouristsSpot',
