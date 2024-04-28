@@ -21,36 +21,40 @@ const Slider = () => {
             >
                 <SwiperSlide>
                     <div className="slide slide1">
-                        <div className='flex items-center mr-0 md:mr-[300px] lg:mr-[500px]'>
-                            <div className='font-roboto text-white'>
-                                <h2 className='text-2xl lg:text-5xl font-bold'>Slide 1</h2>
+                        <div className='flex items-center'>
+                            <div className='ml-[5%] font-roboto text-white'>
+                                <h2 className='mb-6 text-3xl lg:text-5xl font-bold'>France</h2>
+                                <p className='text-lg lg:text-2xl w-full md:w-[80%] lg:w-[45%] font-barlow font-medium'>Rich in history, art, and cuisine. Famous for iconic landmarks like the Eiffel Tower, exquisite wines, and a diverse cultural tapestry spanning from Paris to Provence.</p>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="slide slide2">
-                        <div className='flex items-center mr-0 md:mr-[300px] lg:mr-[500px]'>
-                            <div className='font-roboto text-white'>
-                                <h2 className='text-2xl lg:text-5xl font-bold'>Slide 2</h2>
+                        <div className='flex items-center'>
+                            <div className='ml-[5%] font-roboto text-white'>
+                                <h2 className='mb-6 text-3xl lg:text-5xl font-bold'>Italy</h2>
+                                <p className='text-lg lg:text-2xl w-full md:w-[80%] lg:w-[45%] font-barlow font-medium'>Home to ancient ruins, Renaissance masterpieces, and mouthwatering cuisine. From the canals of Venice to the ruins of Rome, a land where art, history, and beauty converge.</p>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="slide slide3">
-                        <div className='flex items-center mx-7 lg:mx-0 mr-0 md:mr-[300px] lg:mr-[600px] ml-7 md:ml-0 lg:ml-8'>
-                            <div className='font-roboto text-white'>
-                                <h2 className='text-2xl lg:text-5xl font-bold'>Slide 3</h2>
+                        <div className='flex items-center'>
+                            <div className='ml-[5%] font-roboto text-white'>
+                                <h2 className='mb-6 text-3xl lg:text-5xl font-bold'>Spain</h2>
+                                <p className='text-lg lg:text-2xl w-full md:w-[80%] lg:w-[45%] font-barlow font-medium'>Spain, located in southwestern Europe, boasts diverse landscapes, including beaches, mountains, and vibrant cities like Madrid and Barcelona. Known for its rich history, culture, and delicious cuisine.</p>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="slide slide4">
-                        <div className='flex items-center mx-7 lg:mx-0 mr-0 md:mr-[300px] lg:mr-[600px] ml-7 md:ml-0 lg:ml-8'>
-                            <div className='font-roboto text-white'>
-                                <h2 className='text-2xl lg:text-5xl font-bold'>Slide 4</h2>
+                        <div className='flex items-center'>
+                            <div className='ml-[5%] font-roboto text-white'>
+                                <h2 className='mb-6 text-3xl lg:text-5xl font-bold'>England</h2>
+                                <p className='text-lg lg:text-2xl w-full md:w-[80%] lg:w-[45%] font-barlow font-medium'>A land of lush green countryside, historic castles, and charming villages. From the majestic cliffs of Dover to the bustling streets of London, a tapestry of tradition and innovation.</p>
                             </div>
                         </div>
                     </div>

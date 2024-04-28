@@ -15,20 +15,20 @@
 } */
 
 .slide1 {
-    background-image: url("../../assets/1.jpg");
+    background-image: url("../../assets/slider1.jpg");
     
     
 }
 
 
 .slide2 {
-    background-image: url("../../assets/2.jpg");
+    background-image: url("../../assets/slider2.jpg");
 }
 
 .slide3 {
-    background-image: url("../../assets/3.jpg");
+    background-image: url("../../assets/slider3.jpg");
 }
 
 .slide4 {
-    background-image: url("../../assets/4.jpg");
+    background-image: url("../../assets/slider4.jpg");
 }
