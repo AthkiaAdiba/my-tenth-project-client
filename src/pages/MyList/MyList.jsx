@@ -3,6 +3,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { IoPencilSharp } from "react-icons/io5";
 import { MdDeleteForever } from "react-icons/md";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
@@ -80,7 +81,7 @@ const MyList = () => {
                                 <td>{oneRow.countryName}</td>
                                 <td>{oneRow.season}</td>
                                 <td>{oneRow.travelTime}</td>
-                                <th><IoPencilSharp className="text-xl font-extrabold"></IoPencilSharp></th>
+                                <td><Link to={`/update/${oneRow._id}`}><IoPencilSharp className="text-xl font-extrabold"></IoPencilSharp></Link></td>
                                 <th onClick={() => handleDelete(oneRow._id)}><MdDeleteForever className="text-xl font-extrabold"></MdDeleteForever></th>
                             </tr>)
                         }

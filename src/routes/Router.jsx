@@ -7,6 +7,8 @@ import AllTouristsSpot from "../pages/AllTouristsSpot/AllTouristsSpot";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import Details from "../components/Details/Details";
+import UpdatePage from "../pages/UpdatePage/UpdatePage";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 
@@ -17,6 +19,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -35,6 +38,11 @@ const router = createBrowserRouter([
                 path: '/addSpot/:id',
                 element: <Details></Details>,
                 loader: ({params}) => fetch(`http://localhost:5000/addSpot/${params.id}`)
+            },
+            {
+                path: '/update/:id',
+                element: <UpdatePage></UpdatePage>,
+                loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
             },
             {
                 path: '/myList',
