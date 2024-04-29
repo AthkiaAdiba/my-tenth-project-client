@@ -1,0 +1,17 @@
+.partner{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+
+
+
+.partnerimg {
+    background-image: url("../../assets/partners.jpg");
+}
