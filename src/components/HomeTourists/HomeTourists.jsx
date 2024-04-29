@@ -6,7 +6,7 @@ const HomeTourists = () => {
     // console.log(homeTourists)
 
     useEffect(() => {
-        fetch('http://localhost:5000/addSpot')
+        fetch('https://my-tenth-project-server.vercel.app/addSpot')
             .then(res => res.json())
             .then(data => setHomeTourists(data))
     }, [])

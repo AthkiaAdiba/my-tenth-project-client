@@ -14,7 +14,7 @@ const MyList = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/addSpot-email/${user?.email}`)
+            fetch(`https://my-tenth-project-server.vercel.app/addSpot-email/${user?.email}`)
                 .then(res => res.json())
                 .then(data => setMyList(data))
         }
@@ -36,7 +36,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/addSpot/${_id}`, {
+                fetch(`https://my-tenth-project-server.vercel.app/addSpot/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

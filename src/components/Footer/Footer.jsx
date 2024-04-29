@@ -34,7 +34,7 @@ const Footer = () => {
                     <p>HelpLine:<a className="link link-hover">01734569737</a></p>
                 </nav>
             </footer>
-            <footer className="footer footer-center p-10 bg-[#0f2454] text-white font-barlow text-lg">
+            <footer className="footer footer-center pb-10 px-7 lg:px-40 bg-[#0f2454] text-white font-barlow text-lg">
                 <aside>
                     <img src={logo} alt="" />
                    <p>Copyright © 2024 - All right reserved</p>

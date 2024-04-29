@@ -7,7 +7,7 @@ const Guides = () => {
     console.log(guides)
 
     useEffect(() => {
-        fetch('http://localhost:5000/guides')
+        fetch('https://my-tenth-project-server.vercel.app/guides')
             .then(res => res.json())
             .then(data => setGuides(data))
     }, [])

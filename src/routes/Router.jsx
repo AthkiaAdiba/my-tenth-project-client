@@ -28,12 +28,12 @@ const router = createBrowserRouter([
             {
                 path: '/allTouristsSpot',
                 element: <AllTouristsSpot></AllTouristsSpot>,
-                loader: () => fetch('http://localhost:5000/addSpot')
+                loader: () => fetch('https://my-tenth-project-server.vercel.app/addSpot')
             },
             {
                 path: '/countryWiseCards/:countryName',
                 element: <CountryWisePage></CountryWisePage>,
-                loader: ({params}) => fetch(`http://localhost:5000/countryWiseCards/${params.countryName}`)
+                loader: ({params}) => fetch(`https://my-tenth-project-server.vercel.app/countryWiseCards/${params.countryName}`)
             },
             {
                 path: '/addTouristsSpot',
@@ -42,12 +42,12 @@ const router = createBrowserRouter([
             {
                 path: '/addSpot/:id',
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/addSpot/${params.id}`)
+                loader: ({params}) => fetch(`https://my-tenth-project-server.vercel.app/addSpot/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+                loader: ({params}) => fetch(`https://my-tenth-project-server.vercel.app/update/${params.id}`)
             },
             {
                 path: '/myList',

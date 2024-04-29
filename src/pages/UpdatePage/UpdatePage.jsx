@@ -23,7 +23,7 @@ const UpdatePage = () => {
         const updateSpot = { countryName, spotName, location, cost, season, photo, travelTime, visitors, description }
         // console.log(addSpot);
 
-        fetch(`http://localhost:5000/updateSpot/${_id}`, {
+        fetch(`https://my-tenth-project-server.vercel.app/updateSpot/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

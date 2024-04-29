@@ -23,7 +23,7 @@ const AddTouristsSpot = () => {
         const addSpot = { countryName, spotName, location, cost, season, photo, travelTime, visitors, description, userEmail: user.email, userName: user.displayName }
         // console.log(addSpot);
 
-        fetch('http://localhost:5000/addSpot', {
+        fetch('https://my-tenth-project-server.vercel.app/addSpot', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
