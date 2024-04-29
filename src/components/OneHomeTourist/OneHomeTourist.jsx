@@ -9,8 +9,8 @@ const OneHomeTourist = ({tourist}) => {
                 <img src={photo} alt="" className="object-cover object-center w-full h-72 bg-gray-500" />
                 <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
-                        <h2 className="text-3xl font-semibold tracking-wide text-[#0f2454] font-roboto">{spotName}</h2>
-                        <p className="font-poppins text-lg font-normal">{description}</p>
+                        <h2 className="text-3xl font-semibold tracking-wide text-[#0f2454] dark:text-[#2095AE] font-roboto">{spotName}</h2>
+                        <p className="font-poppins dark:text-white text-lg font-normal">{description}</p>
                     </div>
                     <Link to={`/addSpot/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0f2454] text-white">View Details</button></Link>
                 </div>
