@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Benjamin James Smith",
+      "image": "https://res.cloudinary.com/dv6fgvj2c/image/upload/v1714359035/o73wtkkvnv9xas7oxe73.jpg",
+      "profession": "Tourist Guide",
+      "description": "Benjamin James Smith is an enthusiastic guide who shares fascinating stories about historical landmarks with visitors."
+    },
+    {
+      "name": "Jack Ryan Parker",
+      "profession": "Tourist Guide",
+      "image": "https://res.cloudinary.com/dv6fgvj2c/image/upload/v1714358783/loisghwegnfulwsalrzh.jpg",
+      "description": "Jack Ryan Parker is a knowledgeable guide specializing in outdoor adventures, offering memorable experiences to travelers."
+    },
+    {
+      "name": "Lily Grace Johnson",
+      "image": "https://res.cloudinary.com/dv6fgvj2c/image/upload/v1714359134/xkhyutlwhvlnalsj8qz4.jpg",
+      "profession": "Tourist Guide",
+      "description": "Lily Grace Johnson is an experienced guide with a passion for cultural immersion, providing insightful tours to explore local traditions."
+    }
+  ]
+  
