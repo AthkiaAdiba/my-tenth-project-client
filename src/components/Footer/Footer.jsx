@@ -1,12 +1,12 @@
+import logo from '../../assets/logo-light.png'
+import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
     return (
         <div>
-            <footer className="footer font-roboto p-10 bg-gray-900 text-white">
-                <aside>
-                    {/* <IoIosHome className="text-3xl lg:text-4xl"></IoIosHome> */}
-                    <p><span className="text-2xl">DreamLoom Realty</span> Industries Ltd.<br />Providing reliable tech since 1992</p>
-                </aside>
+            <footer className="footer py-10 px-7 lg:px-40 text-lg font-barlow bg-[#0f2454] text-white">
                 <nav>
                     <h6 className="footer-title">Services</h6>
                     <a className="link link-hover">Branding</a>
@@ -27,7 +27,27 @@ const Footer = () => {
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
+                <nav>
+                    <h6 className="footer-title">Office Address</h6>
+                    <p>Level-9, 50, Banani Tower, Banani, Dhaka</p>
+                    <p>Support:<a className="link link-hover">travol@gmail.com</a></p>
+                    <p>HelpLine:<a className="link link-hover">01734569737</a></p>
+                </nav>
             </footer>
+            <footer className="footer footer-center p-10 bg-[#0f2454] text-white font-barlow text-lg">
+                <aside>
+                    <img src={logo} alt="" />
+                   <p>Copyright © 2024 - All right reserved</p>
+                </aside>
+                <nav>
+                    <div className="grid grid-flow-col gap-4 text-3xl">
+                        <a><FaTwitter></FaTwitter></a>
+                        <a><FaYoutube></FaYoutube></a>
+                        <a><FaFacebookF></FaFacebookF></a>
+                    </div>
+                </nav>
+            </footer>
+
         </div>
     );
 };
