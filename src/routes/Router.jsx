@@ -10,6 +10,7 @@ import Details from "../components/Details/Details";
 import UpdatePage from "../pages/UpdatePage/UpdatePage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import CountryWisePage from "../pages/CountryWisePage/CountryWisePage";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -36,21 +37,21 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addTouristsSpot',
-                element: <AddTouristsSpot></AddTouristsSpot>
+                element: <PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>
             },
             {
                 path: '/addSpot/:id',
-                element: <Details></Details>,
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/addSpot/${params.id}`)
             },
             {
                 path: '/update/:id',
-                element: <UpdatePage></UpdatePage>,
+                element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
             },
             {
                 path: '/myList',
-                element: <MyList></MyList>
+                element: <PrivateRoute><MyList></MyList></PrivateRoute>
             },
             {
                 path: '/register',
