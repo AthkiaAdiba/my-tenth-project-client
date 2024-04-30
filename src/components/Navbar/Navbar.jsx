@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { CgProfile } from "react-icons/cg";
-import { IoSettingsOutline } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
