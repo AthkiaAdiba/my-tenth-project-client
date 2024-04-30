@@ -39,10 +39,10 @@ const Navbar = () => {
             <div className="navbar dark:bg-zinc-900 font-barlow shadow-lg fixed top-0 w-full right-0 left-0 z-20 bg-base-100 px-1 lg:px-9 lg:py-6">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <div tabIndex={0} role="button" className="btn btn-ghost dark:text-white lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 text-[#0f2454] text-base font-barlow rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 dark:bg-zinc-900 text-[#0f2454] text-base font-barlow rounded-box w-52">
                             {navLinks}
                             <button className="btn bg-[#2095AE]"><Link to='/login' className="mr-5 text-white border-none font-barlow text-xl">Login</Link></button>
                             <button className="btn bg-[#0f2454]"><Link to='/register' className="w-14 lg:w-20 text-white border-none font-barlow text-xl">Register</Link></button>
