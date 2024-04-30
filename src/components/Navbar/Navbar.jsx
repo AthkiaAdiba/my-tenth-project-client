@@ -8,6 +8,7 @@ import logo from '../../assets/logo-dark.png'
 import { MdOutlineDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import useTheme from "../../hooks/useTheme";
+import { IoIosList } from "react-icons/io";
 
 
 const Navbar = () => {
@@ -68,13 +69,13 @@ const Navbar = () => {
                     user ?
                         <div className="navbar-end flex gap-0 lg:gap-3 items-center">
                             {/* theme change */}
-                            <span onClick={toggleTheme} className="text-2xl mr-3 text-center">
+                            <span onClick={toggleTheme} className="hidden md:hidden lg:block text-2xl mr-3 text-center">
                                 {
                                     theme === "dark" ? <CiLight className="dark:text-white"></CiLight> :
                                         <MdOutlineDarkMode></MdOutlineDarkMode>
                                 }
                             </span>
-                            <details className="dropdown mr-[140%] md:mr-[45%] lg:mr-0">
+                            <details className="dropdown mr-[150%] md:mr-[45%] lg:mr-0">
                                 <summary className="btn w-10 lg:w-12 h-10 lg:h-12 rounded-full">
                                     <div className="avatar tooltip tooltip-right md:tooltip-left lg:tooltip-left" data-tip={user.displayName}>
                                         <div className="w-12 lg:w-12 h-12 lg:h-12 rounded-full">
@@ -97,9 +98,9 @@ const Navbar = () => {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link className="space-x-3 flex items-center">
-                                                        <IoSettingsOutline className="text-lg"></IoSettingsOutline>
-                                                        <p>Updated Profile</p>
+                                                    <Link to='/myList' className="space-x-3 flex items-center">
+                                                        <IoIosList className="text-lg"></IoIosList>
+                                                        <p>My List</p>
                                                     </Link>
                                                 </li>
                                             </ul>
