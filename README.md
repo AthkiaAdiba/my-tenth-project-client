@@ -1,19 +1,45 @@
 # TRAVOL
 
-#### Live Site:
+### It is a Travel Agency Website designed to offer a seamless experience for travelers seeking to plan and prepare for their next trip. The website features a user-friendly interface and a variety of services tailored to meet diverse customer needs.
 
-   - [TRAVOL](https://my-tenth-project-c2dcd.web.app/)
+ ## Key Features:
+ - Ensures a consistent and enjoyable experience across various devices and screen sizes.
+ - Users can view tourist spots by country, add new spots, update, delete, and view details of specific spots by clicking on them.
+ - Implemented user authentication using Firebase Authentication.
 
-### category's name: Europe
- 
+## Technologies:
 
+   
+   
+   - [Firebase](https://firebase.google.com)
+   - [React Hook Form](https://www.react-hook-form.com)
+   - [Reacr Awesome Reveal](https://www.npmjs.com/package/react-awesome-reveal)
+   - [React Router Dom](https://reactrouter.com/en/main)
+   - [React-icons](https://react-icons.github.io/react-icons/)
+   - [react-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
+   - [react-tooltip](https://www.npmjs.com/package/react-tooltip)
+   - [Daisy UI](https://daisyui.com/)
+   - [TailwindCSS](https://tailwindcss.com/)
+   - [Mamba UI - Components](https://mambaui.com/components)
+   - [React-Helmet-Async](https://www.npmjs.com/package/react-helmet-async)
+   - [Prop-Types](https://www.npmjs.com/package/prop-types)
+   - [React-Toastify](https://www.npmjs.com/package/react-toastify)
+   - [sweetalert2](https://sweetalert2.github.io)
 
-## Has been described below what can do users on this website:
-#### 1. Users can identify which page they are on by NavLink's Active class.
-#### 2. They can move from one page to another page by using react routing system.
-#### 3. This website's design simple and professional.
-#### 4. Users can see country wise tourists spots.
-#### 5. They can add tourists spot. And also they can update, and delete that tourists spot.
-#### 6. One user can not see other's information.
-#### 7. They can toggle dark and light theme according their preference.
-#### 8. By clicking on specific tourists spot, they can see that tourists spot's details.
+## Cloning Process:
+   - Clone the repository: git clone https://github.com/AthkiaAdiba/my-tenth-project-client
+   - Navigate to the project directory: cd YourProject
+   - Set up Environment Variables:
+     1. Create a .env.local file in the root directory of your project.
+     2. Add your environment variables in the .env.local file.For example:
+        
+       REACT_APP_API_KEY=your_api_key
+     
+       REACT_APP_AUTH_DOMAIN=your_auth_domain
+     
+       REACT_APP_DATABASE_URL=your_database_url
+     
+       REACT_APP_PROJECT_ID=your_project_id
+
+   - Install dependencies: npm install
+   - Start the development server: npm run dev
